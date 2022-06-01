@@ -2,16 +2,20 @@
   width: 1170px;
   height: 368px;
   margin: 10px 10px 50px;
+  border: none;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 10%);
+  box-shadow: 3px 3px 13px 1px rgb(0 0 0 / 15%);
 }
 
 .imagen-perfil {
   height: 100%;
   width: auto;
+  border: none;
+  border-radius: 20px 0 0 20px;
 }
 
 .contenedor-texto-perfil {
@@ -23,11 +27,11 @@
 }
 
 .nombre-perfil {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .cargo-perfil {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-top: 15px;
   padding-bottom: 30px;
 }
@@ -35,4 +39,18 @@
 .texto-perfil {
   font-size: 1.1rem;
   text-align: justify;
+}
+
+@media screen and (max-width:1160px) {
+  .contenedor-perfil {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .imagen-perfil {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+  }
 }

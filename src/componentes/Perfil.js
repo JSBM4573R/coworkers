@@ -2,19 +2,20 @@ import React from "react";
 import '../css/Perfil.css';
 
 // Componente funcional
-function Perfil() {
+//Se incluyen propiedades a mi componente funcional con props
+function Perfil(props) {
   // Un componente retorna una estructura en JSX
   return (
     <div className="contenedor-perfil">
       <img 
         className="imagen-perfil"
-        // Existen varias formas de incluir en react una imagen esta es una con require()
-        src={require("../img/testimonio-emma.png")}
-        alt="Imagen de Emma"/>
+        src={require(`../img/testimonio-${props.imagen}.png`)}
+        alt={`imagen de ${props.imagen}`}/>
       <div className="contenedor-texto-perfil">
-        <p className="nombre-perfil">Emma Bostian en Suecia</p>
-        <p className="cargo-perfil">Ingeniera de software en Spotify</p>
-        <p className="texto-perfil">Siempre he tenido problemas para aprender JavaScript. He tomado muchos cursos, pero el curso de freeCodeCamp fue el que se quedó. Estudiar JavaScript, así como estructuras de datos y algoritmos en freeCodeCamp me dio las habilidades y la confianza que necesitaba para conseguir el trabajo de mis sueños como ingeniero de software en Spotify.</p>
+        <p className="nombre-perfil"><strong>{props.nombre}</strong> en {props.pais}</p>
+        <p className="cargo-perfil">{props.cargo} en <strong>{props.empresa}</strong></p>
+        <p className="texto-perfil">"{props.descripcion}"</p>
+        {/* <p className="texto-perfil">Siempre he tenido problemas para aprender JavaScript. He tomado muchos cursos, pero el curso de freeCodeCamp fue el que se quedó. Estudiar JavaScript, así como estructuras de datos y algoritmos en freeCodeCamp me dio las habilidades y la confianza que necesitaba para conseguir el trabajo de mis sueños como ingeniero de software en Spotify.</p> */}
       </div>
     </div>
   );
