@@ -1,5 +1,6 @@
-# Getting Started with Create React App
+# Profile-description
 
+Mini project in React that allows to show a cover letter of different job profiles.\
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
