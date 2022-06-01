@@ -9,6 +9,12 @@
   justify-content: center;
   background-color: #ffffff;
   box-shadow: 3px 3px 13px 1px rgb(0 0 0 / 15%);
+  transition: all .3s ease;
+}
+
+.contenedor-perfil:hover {
+  transform: scale(1.02);
+  transition: all .3s ease;
 }
 
 .imagen-perfil {
@@ -47,6 +53,7 @@
     display: flex;
     flex-wrap: wrap;
     height: auto;
+    transition: .5s ease;
   }
 
   .imagen-perfil {
